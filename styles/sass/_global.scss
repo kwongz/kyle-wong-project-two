@@ -1,0 +1,130 @@
+// colors
+
+$black:#2c2c2c;
+$darkGreen:#285e64;
+$yellow:#f6a823;
+$grey:#4f4f4f;
+$teal:#05afc1;
+$red:#a82706;
+$smoke:#f0efed;
+
+// stripping styles
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration:none
+}
+
+li {
+    list-style: none;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+// global styles
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.flexContainer {
+    display: flex;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    line-height: 32px;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lora', serif;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+h2 {
+    font-size: 4.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: $teal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 32px;
+    font-weight: bold;
+    border: none;
+}
+
+button:hover,
+button:focus {
+    color: $teal;
+    background-color: $black;
+    cursor: pointer;
+}
+
+// nav css applied to all pages
+
+
+nav {
+    padding: 20px;
+    background-color: $yellow;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: $black;
+    span {
+        font-size: 4.2rem;
+        font-family: 'Lora', serif;
+        padding: 0px 40px;
+    }
+    li {
+        padding: 0px 20px;
+        font-size: 3.2rem;
+        font-weight: bold;
+        a {
+        color: $black;
+        font-size: 2rem;
+        }
+        a:hover,
+        a:focus {
+        border-bottom: 2px solid $black;
+        }
+    }
+}
+
+// footer stylings
+
+footer {
+    background-color: $black;
+    color: $smoke;
+    text-align: center;
+    padding: 10px 0px
+}

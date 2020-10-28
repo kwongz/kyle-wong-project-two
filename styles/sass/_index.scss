@@ -1,0 +1,147 @@
+// Styling for the home page
+
+.indexHeader {
+    background-color: $yellow;
+    position: relative;
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            .circular {
+                flex-grow: 1;
+                position: relative;
+                margin-left: 70px;
+                margin-right: 50px;
+                text-transform: uppercase;
+            }
+            div:last-child{
+                position: relative;
+                top: 30px;
+                box-shadow: 20px 20px lighten($smoke, 100);
+            }
+        }
+}
+
+.circular img{
+    width: 170px;
+    position: absolute;
+    bottom: 60px;
+    left: -55px;
+}
+
+h1 {
+    font-size: 12rem;
+    color: darken($grey, 15);
+    line-height: 92px;
+}
+
+p {
+    padding: 40px 0px;
+}
+
+.about {
+    background-color: $smoke;
+    .textContainer:first-child {
+        padding-right: 15%;
+        padding-top: 100px;
+        padding-bottom:150px;
+        width: 100%;
+    }
+}
+
+
+.cards {
+    flex-wrap: wrap;
+    .left {
+        width: 51%;
+    }
+    .right {
+        width: 49%;
+    }
+    .imageContainer {
+        img {
+            width: 80%;
+        }
+    }
+    .imageContainer.right {
+        order: 2;
+    }
+    .textContainer.left {
+        order: 1;
+    }
+
+}
+
+
+
+
+// info section
+
+.info .flexContainer {
+    flex-wrap: wrap;
+}
+
+.info h2 {
+    padding-top: 5px;
+}
+
+.info{
+    background-color: $smoke;
+    padding-top: 50px;
+    .card {
+        display: flex;
+        width: 50%;
+        padding-top: 25px;
+        i {
+            background-color: $yellow;
+            border-radius: 50%;
+            padding: 10px;
+            height: 40px;
+        }
+        div {
+            padding-left: 15px;
+        }
+    }
+}
+
+.bg {
+    background-image: url(../assets/home-image-4.jpg);
+    height: 40vh;
+    margin-top: 50px;
+}
+
+// journey
+
+.journey {
+    background-color: $smoke;
+    padding: 50px 0px;
+    .imageContainer {
+        background-color: $yellow;
+        margin-right: 25px;
+        width: 80%;
+    }
+        img{
+            position: relative;
+            top: -20px;
+            left: -20px;
+        }
+    h2 {
+        padding-top: 10px;
+    }
+    .textContainer {
+        padding-left: 40px;
+    }
+}
+
+// gallery styling
+
+.gallery {
+    padding: 50px 0px;
+    .flexContainer {
+        justify-content: space-between;
+    }
+    .imageContainer {
+        width: 31%;
+    }
+}
