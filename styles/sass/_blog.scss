@@ -1,0 +1,103 @@
+.blogHeader{
+    position: relative;
+    .bg{
+        background: url(../assets/blog-image-1.jpg) no-repeat;
+        background-size: cover;
+        margin: 0px;
+        height: 40vh;
+    }
+    h1 {
+        position: absolute;
+        bottom: -10px;
+        left: 250px;
+    }
+}
+
+.blog {
+    padding-top: 75px;
+    background: $smoke;
+    h2 {
+    font-size: 24px;
+    color: $black;
+    }
+    .flexContainer {
+        justify-content: space-between;
+    }
+    p{
+        padding: 10px 0px;
+    }
+}
+
+aside {
+    width: 30%;
+    .profile,
+    .recent {
+        background-color: #ffffff;
+        padding: 25px;
+    }
+    .profile {
+        a {
+            color: $darkGreen;
+            font-weight: bold;
+        }
+        p {
+            padding-bottom: 0px;
+            padding-top: 25px;
+        }
+        h2 {
+            padding-top: 25px;
+        }
+    }
+    .recent {
+        margin-top: 50px;
+        ul{
+            padding-top: 20px;
+            padding-left: 25px;
+        }
+        li{
+            list-style: disc ;
+            color: $yellow;
+        }
+        li p {
+            color: $black;
+            padding: 0px;
+        }
+    }
+}
+
+.blogger {
+    width: 68%;
+    .sophiePost,
+    .guestPost .flexContainer {
+        background-color: #ffffff;
+        padding: 25px;
+        border-bottom: 5px solid $yellow;
+    }
+}
+
+time {
+    font-style: italic;
+}
+
+.user {
+    color: $darkGreen;
+    font-weight: bold;
+}
+
+.guestPost {
+    margin-top: 25px;
+    .flexContainer{
+        margin-top: 25px;
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px;
+        .imageContainer {
+            width: 15%;
+            padding-top: 15px;
+        }
+        .textContainer{
+            width: 83%;
+        }
+
+    }
+}

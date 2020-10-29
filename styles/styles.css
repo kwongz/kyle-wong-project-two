@@ -282,6 +282,11 @@ h3 {
   font-family: 'Lora', serif;
 }
 
+h1 {
+  font-size: 8rem;
+  text-transform: uppercase;
+}
+
 img {
   width: 100%;
   -o-object-fit: cover;
@@ -361,6 +366,10 @@ footer {
   padding: 10px 0px;
 }
 
+footer p {
+  padding: 0px;
+}
+
 .indexHeader {
   background-color: #f6a823;
   position: relative;
@@ -391,7 +400,7 @@ footer {
 
 .indexHeader .content div:last-child {
   position: relative;
-  top: 30px;
+  top: 80px;
   -webkit-box-shadow: 20px 20px white;
           box-shadow: 20px 20px white;
 }
@@ -403,7 +412,7 @@ footer {
   left: -55px;
 }
 
-h1 {
+.indexHeader h1 {
   font-size: 12rem;
   color: #292929;
   line-height: 92px;
@@ -430,27 +439,27 @@ p {
 }
 
 .cards .left {
-  width: 51%;
+  width: 52%;
 }
 
 .cards .right {
-  width: 49%;
+  width: 48%;
 }
 
-.cards .imageContainer img {
-  width: 80%;
+.imageContainer.left {
+  background-color: #a82706;
 }
 
-.cards .imageContainer.right {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+.imageContainer .bgContainer {
+  position: relative;
+  top: -10px;
+  background: #a82706;
 }
 
-.cards .textContainer.left {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+.imageContainer .bgContainer img {
+  position: relative;
+  top: -10px;
+  left: -20px;
 }
 
 .info .flexContainer {
@@ -529,4 +538,131 @@ p {
 
 .gallery .imageContainer {
   width: 31%;
+  border: 3px solid #ffffff;
+}
+
+.gallery .imageContainer:hover {
+  border: 3px solid #a82706;
+}
+
+.blogHeader {
+  position: relative;
+}
+
+.blogHeader .bg {
+  background: url(../assets/blog-image-1.jpg) no-repeat;
+  background-size: cover;
+  margin: 0px;
+  height: 40vh;
+}
+
+.blogHeader h1 {
+  position: absolute;
+  bottom: -10px;
+  left: 250px;
+}
+
+.blog {
+  padding-top: 75px;
+  background: #f0efed;
+}
+
+.blog h2 {
+  font-size: 24px;
+  color: #2c2c2c;
+}
+
+.blog .flexContainer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog p {
+  padding: 10px 0px;
+}
+
+aside {
+  width: 30%;
+}
+
+aside .profile,
+aside .recent {
+  background-color: #ffffff;
+  padding: 25px;
+}
+
+aside .profile a {
+  color: #285e64;
+  font-weight: bold;
+}
+
+aside .profile p {
+  padding-bottom: 0px;
+  padding-top: 25px;
+}
+
+aside .profile h2 {
+  padding-top: 25px;
+}
+
+aside .recent {
+  margin-top: 50px;
+}
+
+aside .recent ul {
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+aside .recent li {
+  list-style: disc;
+  color: #f6a823;
+}
+
+aside .recent li p {
+  color: #2c2c2c;
+  padding: 0px;
+}
+
+.blogger {
+  width: 68%;
+}
+
+.blogger .sophiePost,
+.blogger .guestPost .flexContainer {
+  background-color: #ffffff;
+  padding: 25px;
+  border-bottom: 5px solid #f6a823;
+}
+
+time {
+  font-style: italic;
+}
+
+.user {
+  color: #285e64;
+  font-weight: bold;
+}
+
+.guestPost {
+  margin-top: 25px;
+}
+
+.guestPost .flexContainer {
+  margin-top: 25px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+
+.guestPost .flexContainer .imageContainer {
+  width: 15%;
+  padding-top: 15px;
+}
+
+.guestPost .flexContainer .textContainer {
+  width: 83%;
 }

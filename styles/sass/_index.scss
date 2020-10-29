@@ -17,7 +17,7 @@
             }
             div:last-child{
                 position: relative;
-                top: 30px;
+                top: 80px;
                 box-shadow: 20px 20px lighten($smoke, 100);
             }
         }
@@ -30,7 +30,7 @@
     left: -55px;
 }
 
-h1 {
+.indexHeader h1 {
     font-size: 12rem;
     color: darken($grey, 15);
     line-height: 92px;
@@ -50,31 +50,36 @@ p {
     }
 }
 
+// card section, the hardest section to work on
 
 .cards {
     flex-wrap: wrap;
-    .left {
-        width: 51%;
-    }
-    .right {
-        width: 49%;
-    }
-    .imageContainer {
-        img {
-            width: 80%;
-        }
-    }
-    .imageContainer.right {
-        order: 2;
-    }
-    .textContainer.left {
-        order: 1;
-    }
-
 }
 
+.cards .left {
+    width: 52%;
+}
 
+.cards .right{
+    width: 48%;
+}
 
+.imageContainer.left {
+    background-color: $red;
+}
+
+.imageContainer .bgContainer {
+    position: relative;
+    top: -10px;
+    background: $red;
+    
+}
+
+.imageContainer .bgContainer img {
+    position: relative;
+    top: -10px;
+    left: -20px;
+}
 
 // info section
 
@@ -143,5 +148,9 @@ p {
     }
     .imageContainer {
         width: 31%;
+        border: 3px solid #ffffff;
+    }
+    .imageContainer:hover {
+        border: 3px solid $red;
     }
 }

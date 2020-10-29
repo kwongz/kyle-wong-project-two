@@ -56,6 +56,11 @@ h3 {
     font-family: 'Lora', serif;
 }
 
+h1 {
+    font-size: 8rem;
+    text-transform: uppercase;
+}
+
 img {
     width: 100%;
     object-fit: cover;
@@ -126,5 +131,8 @@ footer {
     background-color: $black;
     color: $smoke;
     text-align: center;
-    padding: 10px 0px
+    padding: 10px 0px;
+    p {
+        padding: 0px;
+    }
 }
