@@ -20,8 +20,9 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
-        <h1>blog</h1>
-        <div class="bg"></div>
+        <div class="bg">
+            <h1>blog</h1>
+        </div>
     </header>
     <main>
         <section class="blog">
@@ -63,7 +64,7 @@
                                 <img src="./assets/blog-image-3.jpg" alt="Jeremy's profile picture">
                             </div>
                             <div class="textContainer">
-                                <p><span class="user"><time>Wednesday October 10th, 2018 by Jeremy</time></span></p>
+                                <p><span class="user"><time datetime="2018-10-9">Tuesday October 9th, 2018</time> by Jeremy</span></p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique reiciendis obcaecati laborum rerum quas dolor tempora sint laboriosam vero quod repellat, nostrum porro dignissimos aliquid!</p>
                             </div>
                         </div>
@@ -72,15 +73,21 @@
                                 <img src="./assets/blog-image-4.jpg" alt="Julia's profile picture">
                             </div>
                             <div class="textContainer">
-                                <p><span class="user"><time>Wednesday October 10th, 2018 by Julia</time></span></p>
+                                <p><span class="user"><time datetime="2018-9-10">Wednesday October 10th, 2018</time> by Julia</span></p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet unde repellat sunt dicta laborum facere commodi nobis facilis ullam laboriosam, sit similique iusto asperiores adipisci</p>
                             </div>
                         </div>
                     </div>
-                    <form action="" method="" class="comment" name="comment">
-                        <input type="text" name="name" id="name">
-                        <label for="email">your email</label>
-                        <input type="email" name="userEmail" id="userEmail">
+                    <form action="" method="" class="commentForm" name="comment">
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <label for="name" class="srOnly">Name</label>
+
+                        <input type="email" name="userEmail" id="userEmail" placeholder="Email address">
+                        <label for="email" class="srOnly">Email Address</label>
+
+                        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="comment"></textarea>
+                        <label for="comment" class="srOnly">comment</label>
+                        <button class="submitComment">Post Comment</button>
                     </form>
                 </div>
             </div>

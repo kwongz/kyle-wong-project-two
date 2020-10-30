@@ -1,0 +1,15 @@
+    .contactHeader .bg{
+        background: url(../assets/contact-image-1.jpg) no-repeat;
+    }
+
+form {
+    input[type="text"], 
+    input[type="email"],
+    textarea {
+        background-color: #ffffff;
+    }
+}
+
+.contactSection {
+    background-color: $smoke;
+}

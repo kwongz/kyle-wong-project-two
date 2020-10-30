@@ -318,6 +318,58 @@ button:focus {
   cursor: pointer;
 }
 
+input,
+textarea {
+  border: none;
+  margin-top: 25px;
+  padding: 30px 25px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+form input[type=text],
+form input[type=email] {
+  width: 48%;
+}
+
+form textarea {
+  width: 100%;
+}
+
+form button {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.blogHeader,
+.contactHeader {
+  position: relative;
+}
+
+.blogHeader .bg,
+.contactHeader .bg {
+  background-size: cover;
+  margin: 0px;
+  height: 40vh;
+}
+
+.blogHeader h1,
+.contactHeader h1 {
+  position: absolute;
+  bottom: -10px;
+  left: 250px;
+}
+
 nav {
   padding: 20px;
   background-color: #f6a823;
@@ -636,13 +688,10 @@ aside .recent li p {
   border-bottom: 5px solid #f6a823;
 }
 
-time {
-  font-style: italic;
-}
-
 .user {
   color: #285e64;
   font-weight: bold;
+  font-style: italic;
 }
 
 .guestPost {
@@ -659,10 +708,105 @@ time {
 }
 
 .guestPost .flexContainer .imageContainer {
-  width: 15%;
-  padding-top: 15px;
+  width: 100px;
+  margin-right: 15px;
 }
 
 .guestPost .flexContainer .textContainer {
-  width: 83%;
+  width: 100%;
+}
+
+.textContainer p {
+  padding: 0px;
+}
+
+@media (max-width: 1024px) {
+  .blogHeader .bg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blogHeader .bg h1 {
+    position: initial;
+    left: 0px;
+    bottom: 0px;
+  }
+  .blog .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  aside {
+    width: 100%;
+  }
+  aside .profile,
+  aside .recent {
+    width: 100%;
+    text-align: center;
+  }
+  .recent ul {
+    margin: 0 auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .recent li {
+    padding-top: 25px;
+  }
+  .blogger {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .commentForm input[type="text"],
+  .commentForm input[type="email"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  aside .recent ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    padding: 0px;
+  }
+  li {
+    width: 200px;
+  }
+  .guestPost .flexContainer .textContainer {
+    width: 100%;
+  }
+}
+
+.contactHeader .bg {
+  background: url(../assets/contact-image-1.jpg) no-repeat;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  background-color: #ffffff;
+}
+
+.contactSection {
+  background-color: #f0efed;
 }

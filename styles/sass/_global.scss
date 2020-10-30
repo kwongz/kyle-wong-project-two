@@ -91,6 +91,47 @@ button:focus {
     cursor: pointer;
 }
 
+input,
+textarea {
+    border: none;
+    margin-top: 25px;
+    padding: 30px 25px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    input[type=text],
+    input[type=email] {
+        width: 48%;
+    }
+    textarea{
+        width: 100%;
+    }
+    button {
+        width: 100%;
+        margin-top: 25px;
+    }
+}
+
+// header stylings for blog and contact page
+.blogHeader,
+.contactHeader{
+    position: relative;
+    .bg{
+        background-size: cover;
+        margin: 0px;
+        height: 40vh;
+    }
+    h1 {
+        position: absolute;
+        bottom: -10px;
+        left: 250px;
+    }
+}
+
 // nav css applied to all pages
 
 
