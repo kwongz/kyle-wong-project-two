@@ -1,15 +1,8 @@
 .blogHeader{
-    position: relative;
     .bg{
-        background: url(../assets/blog-image-1.jpg) no-repeat;
-        background-size: cover;
+        background-image: url(../assets/blog-image-1.jpg);
         margin: 0px;
         height: 40vh;
-    }
-    h1 {
-        position: absolute;
-        bottom: -10px;
-        left: 250px;
     }
 }
 
@@ -129,19 +122,6 @@ aside {
 
     @media (max-width: 1024px) {
 
-        .blogHeader{
-            .bg {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                h1 {
-                    position: initial;
-                    left: 0px;
-                    bottom: 0px;
-                }
-            }
-        } 
-
         .blog {
             .flexContainer {
                 flex-direction: column;
@@ -176,20 +156,6 @@ aside {
             margin-top: 25px;
         }
     }
-    
-
-    @media (max-width:768px) {
-
-        .commentForm{
-            input[type="text"], 
-            input[type="email"] {
-                width: 100%;
-            }
-        }
-        
-        
-
-    }
 
 
     @media (max-width:580px) {
@@ -202,9 +168,6 @@ aside {
                 }
             }
         }   
-        li {
-            width: 200px;
-        }
 
         .guestPost .flexContainer .textContainer {
             width: 100%;

@@ -91,6 +91,11 @@ button:focus {
     cursor: pointer;
 }
 
+a:hover,
+a:focus {
+    border-bottom: 3px solid black;
+}
+
 input,
 textarea {
     border: none;
@@ -119,16 +124,20 @@ form {
 // header stylings for blog and contact page
 .blogHeader,
 .contactHeader{
-    position: relative;
     .bg{
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         margin: 0px;
         height: 40vh;
+        div {
+            height: 100%;
+            position: relative;
+        }
     }
     h1 {
         position: absolute;
         bottom: -10px;
-        left: 250px;
     }
 }
 
@@ -177,3 +186,28 @@ footer {
         padding: 0px;
     }
 }
+
+// shared media queries
+
+// forms
+
+    @media (max-width:768px) {
+
+        form{
+            input[type="text"], 
+            input[type="email"] {
+                width: 100%;
+            }
+        }
+
+        
+        .blogHeader h1,
+        .contactHeader h1{ 
+            font-size: 5rem;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            bottom: -150px;
+        }
+
+    }

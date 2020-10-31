@@ -6,6 +6,7 @@
     <title>Sophie's Contact</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/243b648db7.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="contactHeader">
@@ -20,14 +21,30 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
-        <div class="bg">
-            <h1>Get in touch</h1>
+        <div class=" bg">
+            <div class="wrapper">
+                <h1>Get in touch</h1>
+            </div>
         </div>
     </header>
     <main>
         <section class="contactSection">
-            <div class="wrapper">
-                <div class="contactInfo"></div>
+            <div class="wrapper flexContainer">
+                <div class="contactInfo flexContainer">
+                    <ul class="flexContainer">
+                        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                    <span>info@email.com</span>
+                    <ul>
+                        <li>123-456-7890</li>
+                        <li>123 Queen Street West, Unit 10</li>
+                        <li>Toronto Ontario</li>
+                        <li>M5V2D5</li>
+                    </ul>
+                </div>
                 <form action="" method="" class="commentForm" name="comment">
                     <input type="text" name="name" id="name" placeholder="Name">
                     <label for="name" class="srOnly">Name</label>

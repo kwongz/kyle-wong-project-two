@@ -318,6 +318,11 @@ button:focus {
   cursor: pointer;
 }
 
+a:hover,
+a:focus {
+  border-bottom: 3px solid black;
+}
+
 input,
 textarea {
   border: none;
@@ -351,23 +356,25 @@ form button {
   margin-top: 25px;
 }
 
-.blogHeader,
-.contactHeader {
-  position: relative;
-}
-
 .blogHeader .bg,
 .contactHeader .bg {
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0px;
   height: 40vh;
+}
+
+.blogHeader .bg div,
+.contactHeader .bg div {
+  height: 100%;
+  position: relative;
 }
 
 .blogHeader h1,
 .contactHeader h1 {
   position: absolute;
   bottom: -10px;
-  left: 250px;
 }
 
 nav {
@@ -420,6 +427,21 @@ footer {
 
 footer p {
   padding: 0px;
+}
+
+@media (max-width: 768px) {
+  form input[type="text"],
+  form input[type="email"] {
+    width: 100%;
+  }
+  .blogHeader h1,
+  .contactHeader h1 {
+    font-size: 5rem;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    bottom: -150px;
+  }
 }
 
 .indexHeader {
@@ -597,21 +619,10 @@ p {
   border: 3px solid #a82706;
 }
 
-.blogHeader {
-  position: relative;
-}
-
 .blogHeader .bg {
-  background: url(../assets/blog-image-1.jpg) no-repeat;
-  background-size: cover;
+  background-image: url(../assets/blog-image-1.jpg);
   margin: 0px;
   height: 40vh;
-}
-
-.blogHeader h1 {
-  position: absolute;
-  bottom: -10px;
-  left: 250px;
 }
 
 .blog {
@@ -721,22 +732,6 @@ aside .recent li p {
 }
 
 @media (max-width: 1024px) {
-  .blogHeader .bg {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .blogHeader .bg h1 {
-    position: initial;
-    left: 0px;
-    bottom: 0px;
-  }
   .blog .flexContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -772,13 +767,6 @@ aside .recent li p {
   }
 }
 
-@media (max-width: 768px) {
-  .commentForm input[type="text"],
-  .commentForm input[type="email"] {
-    width: 100%;
-  }
-}
-
 @media (max-width: 580px) {
   aside .recent ul {
     -webkit-box-orient: vertical;
@@ -789,9 +777,6 @@ aside .recent li p {
         align-content: center;
     padding: 0px;
   }
-  li {
-    width: 200px;
-  }
   .guestPost .flexContainer .textContainer {
     width: 100%;
   }
@@ -799,14 +784,77 @@ aside .recent li p {
 
 .contactHeader .bg {
   background: url(../assets/contact-image-1.jpg) no-repeat;
+  background-size: cover;
 }
 
-form input[type="text"],
-form input[type="email"],
-form textarea {
+.contactSection form {
+  width: 65%;
+}
+
+.contactSection form input[type="text"],
+.contactSection form input[type="email"],
+.contactSection form textarea {
   background-color: #ffffff;
 }
 
 .contactSection {
   background-color: #f0efed;
+  padding-top: 100px;
+}
+
+.contactSection .flexContainer {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactInfo {
+  background-color: white;
+  width: 32%;
+  margin-top: 25px;
+  margin-right: 25px;
+  padding: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contactInfo ul.flexContainer {
+  width: 150px;
+  padding-bottom: 20px;
+}
+
+.contactInfo ul.flexContainer a {
+  color: #f6a823;
+  font-size: 24px;
+}
+
+.contactInfo span {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 980px) {
+  .contactSection .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactInfo {
+    width: 100%;
+  }
+  .contactSection form {
+    width: 100%;
+  }
+  .contactInfo ul.flexContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
