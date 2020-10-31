@@ -396,26 +396,31 @@ nav ul {
   color: #2c2c2c;
 }
 
-nav ul span {
+nav span {
   font-size: 4.2rem;
   font-family: 'Lora', serif;
   padding: 0px 40px;
 }
 
-nav ul li {
+nav li {
   padding: 0px 20px;
   font-size: 3.2rem;
   font-weight: bold;
 }
 
-nav ul li a {
+nav a {
   color: #2c2c2c;
   font-size: 2rem;
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
+nav a:hover,
+nav a:focus {
   border-bottom: 2px solid #2c2c2c;
+}
+
+.toggle,
+input[type=checkbox] {
+  display: none;
 }
 
 footer {
@@ -430,6 +435,9 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
   form input[type="text"],
   form input[type="email"] {
     width: 100%;
@@ -441,6 +449,92 @@ footer p {
     position: relative;
     text-align: center;
     bottom: -150px;
+  }
+  .indexHeader,
+  .blogHeader,
+  .contactHeader {
+    position: relative;
+    overflow: hidden;
+  }
+  .indexHeader input[type=checkbox],
+  .indexHeader .toggle,
+  .blogHeader input[type=checkbox],
+  .blogHeader .toggle,
+  .contactHeader input[type=checkbox],
+  .contactHeader .toggle {
+    display: block;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    right: 10px;
+  }
+  .indexHeader .toggle,
+  .blogHeader .toggle,
+  .contactHeader .toggle {
+    top: 20px;
+    font-size: 50px;
+    z-index: 9;
+  }
+  .indexHeader input[type=checkbox],
+  .blogHeader input[type=checkbox],
+  .contactHeader input[type=checkbox] {
+    opacity: 0;
+    z-index: 10;
+  }
+  input[type=checkbox],
+  .toggle {
+    cursor: pointer;
+  }
+  input[type=checkbox]:hover + .toggle,
+  input[type=checkbox]:checked + .toggle {
+    color: #f0efed;
+  }
+  input[type=checkbox]:checked ~ nav {
+    right: 0px;
+  }
+  nav {
+    position: fixed;
+    right: -750px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    z-index: 5;
+  }
+  nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav ul li {
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  nav a {
+    width: 100%;
+    display: block;
+  }
+  nav a:hover,
+  nav a:focus {
+    background-color: #2c2c2c;
+    color: #f6a823;
+    border: none;
+  }
+  nav span {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .indexHeader h1,
+  .blogHeader h1,
+  .contactHeader h1 {
+    font-size: 3.5rem;
   }
 }
 
@@ -512,28 +606,30 @@ p {
       flex-wrap: wrap;
 }
 
-.cards .left {
+.cards .imageContainer {
   width: 52%;
+  position: relative;
 }
 
-.cards .right {
+.cards .imageContainer.left {
+  top: -25px;
+  left: -25px;
+  -webkit-box-shadow: 25px 25px #a82706;
+          box-shadow: 25px 25px #a82706;
+}
+
+.cards .textContainer {
   width: 48%;
 }
 
-.imageContainer.left {
-  background-color: #a82706;
-}
-
-.imageContainer .bgContainer {
-  position: relative;
-  top: -10px;
-  background: #a82706;
-}
-
-.imageContainer .bgContainer img {
-  position: relative;
-  top: -10px;
-  left: -20px;
+.cards .imageContainer.right {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  bottom: -25px;
+  right: -25px;
+  -webkit-box-shadow: 25px 25px #f6a823;
+          box-shadow: 25px 25px #f6a823;
 }
 
 .info .flexContainer {
@@ -676,6 +772,10 @@ aside .recent {
 aside .recent ul {
   padding-top: 20px;
   padding-left: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 aside .recent li {
@@ -732,43 +832,96 @@ aside .recent li p {
 }
 
 @media (max-width: 1024px) {
+  aside {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  aside .profile {
+    width: 60%;
+  }
+  aside .recent {
+    margin-left: 25px;
+    width: 280px;
+    margin-top: 0px;
+  }
+  aside .recent h2 {
+    text-align: center;
+  }
+  aside .recent ul.flexContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0px;
+  }
+  .recent ul li {
+    padding: 5px 0px;
+  }
   .blog .flexContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  aside {
-    width: 100%;
-  }
-  aside .profile,
-  aside .recent {
-    width: 100%;
-    text-align: center;
-  }
-  .recent ul {
-    margin: 0 auto;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .recent li {
-    padding-top: 25px;
-  }
   .blogger {
     width: 100%;
     margin-top: 25px;
   }
+  .recent .flexContainer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .blogger .guestPost .flexContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
-@media (max-width: 580px) {
-  aside .recent ul {
+@media (max-width: 768px) {
+  aside {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  aside .profile {
+    width: 100%;
+  }
+  aside .recent {
+    width: 100%;
+    margin-top: 25px;
+    margin-left: 0px;
+  }
+  aside .recent ul.flexContainer {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .recent ul li {
+    margin-left: 20px;
+  }
+  .blogger .guestPost .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  aside .recent .flexContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -777,8 +930,8 @@ aside .recent li p {
         align-content: center;
     padding: 0px;
   }
-  .guestPost .flexContainer .textContainer {
-    width: 100%;
+  .recent ul li {
+    margin-left: 0px;
   }
 }
 

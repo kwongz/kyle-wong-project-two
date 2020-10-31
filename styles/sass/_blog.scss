@@ -46,6 +46,7 @@ aside {
         ul{
             padding-top: 20px;
             padding-left: 25px;
+            flex-direction: column;
         }
         li{
             list-style: disc ;
@@ -122,55 +123,97 @@ aside {
 
     @media (max-width: 1024px) {
 
+        aside {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            .profile{
+                width: 60%;
+            }
+            .recent {
+                margin-left: 25px;
+                width: 280px;
+                margin-top: 0px;
+                h2 {
+                    text-align: center;
+                }
+                ul.flexContainer {
+                    justify-content: center;
+                    padding-left: 0px;
+                }
+            }
+        }
+
+        .recent ul li {
+            padding: 5px 0px;
+        }
+
+
         .blog {
             .flexContainer {
                 flex-direction: column;
             }
         }
-        aside {
-            width: 100%;
-            .profile,
-            .recent {
-                width: 100%;
-                text-align: center;
-            }
-        }
-
-
-        .recent {
-            ul {
-                margin: 0 auto;
-                width: 100%;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-            li {
-                padding-top: 25px;
-            }
-        }
-
 
         .blogger {
             width: 100%;
             margin-top: 25px;
         }
+
+        .recent {
+            .flexContainer {
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+        }
+
+        .blogger .guestPost .flexContainer {
+            flex-direction: row;
+        }
+
+    }
+
+    @media (max-width:768px){
+        aside {
+            flex-direction: column;
+            .profile {
+                width: 100%;
+            }
+            .recent {
+                width: 100%;
+                margin-top: 25px;
+                margin-left: 0px;
+            }
+        }
+
+        aside .recent ul.flexContainer {
+            justify-content: space-around;
+        }
+        .recent ul li {
+            margin-left: 20px;
+        }
+
+        .blogger .guestPost .flexContainer {
+            flex-direction: column;
+        }
     }
 
 
-    @media (max-width:580px) {
+
+    @media (max-width:480px) {
         aside{
             .recent{ 
-                ul{
+                .flexContainer{
                     flex-direction: column;
                     align-content: center;
                     padding: 0px;
                 }
             }
-        }   
-
-        .guestPost .flexContainer .textContainer {
-            width: 100%;
+        }
+        
+        .recent ul li {
+            margin-left: 0px;
         }
     }
 

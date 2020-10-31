@@ -121,6 +121,8 @@ form {
     }
 }
 
+
+
 // header stylings for blog and contact page
 .blogHeader,
 .contactHeader{
@@ -149,12 +151,14 @@ nav {
     background-color: $yellow;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    color: $black;
+nav {
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        color: $black;
+    }
     span {
         font-size: 4.2rem;
         font-family: 'Lora', serif;
@@ -164,17 +168,22 @@ nav ul {
         padding: 0px 20px;
         font-size: 3.2rem;
         font-weight: bold;
-        a {
+    }
+    a {
         color: $black;
         font-size: 2rem;
-        }
-        a:hover,
-        a:focus {
+    }
+    a:hover,
+    a:focus {
         border-bottom: 2px solid $black;
-        }
     }
 }
 
+.toggle,
+input[type=checkbox] {
+    display: none;
+}
+    
 // footer stylings
 
 footer {
@@ -192,6 +201,9 @@ footer {
 // forms
 
     @media (max-width:768px) {
+        body {
+            font-size: 1.6rem;
+        }
 
         form{
             input[type="text"], 
@@ -210,4 +222,91 @@ footer {
             bottom: -150px;
         }
 
+        // slide out nav
+
+        
+        .indexHeader,
+        .blogHeader,
+        .contactHeader {
+            position: relative;
+            overflow: hidden;
+            input[type=checkbox],
+            .toggle { 
+                display: block;
+                position: fixed;
+                height: 50px;
+                width: 50px;
+                right: 10px;
+
+            }
+            .toggle {
+                top: 20px;
+                font-size: 50px;
+                z-index: 9;
+            }
+            input[type=checkbox] {
+                opacity: 0;
+                z-index: 10;
+            }
+        }
+
+        input[type=checkbox],
+        .toggle {
+            cursor: pointer;
+        }
+
+        input[type=checkbox]:hover + .toggle,
+        input[type=checkbox]:checked + .toggle {
+            color: $smoke;
+        }
+
+        input[type=checkbox]:checked ~ nav {
+            right: 0px;
+        }
+
+        nav{
+            position: fixed;
+            right: -750px;
+            flex-direction: column;
+            width: 100%;
+            z-index: 5;
+
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+
+        nav ul li {
+            padding-top: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        nav a {
+            width: 100%;
+            display: block;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background-color: $black;
+            color: $yellow;
+            border: none;
+        }
+
+        nav span {
+            order: -1;
+        }
+
+    }
+
+    @media (max-width: 480px) {
+        .indexHeader,
+        .blogHeader,
+        .contactHeader {
+            h1 {
+                font-size: 3.5rem;
+            }
+        }
     }
