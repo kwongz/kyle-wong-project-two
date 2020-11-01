@@ -252,7 +252,7 @@ li {
   list-style: none;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   display: none;
 }
 
@@ -269,7 +269,7 @@ input[type=checkbox] {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 2rem;
   line-height: 32px;
 }
@@ -279,12 +279,12 @@ h2,
 h3 {
   margin: 0px;
   padding: 0px;
-  font-family: 'Lora', serif;
 }
 
 h1 {
   font-size: 8rem;
   text-transform: uppercase;
+  font-family: "Lora", serif;
 }
 
 img {
@@ -296,6 +296,12 @@ img {
 
 h2 {
   font-size: 4.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 3.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -342,8 +348,8 @@ form {
   margin-bottom: 100px;
 }
 
-form input[type=text],
-form input[type=email] {
+form input[type="text"],
+form input[type="email"] {
   width: 48%;
 }
 
@@ -398,7 +404,7 @@ nav ul {
 
 nav span {
   font-size: 4.2rem;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   padding: 0px 40px;
 }
 
@@ -419,7 +425,7 @@ nav a:focus {
 }
 
 .toggle,
-input[type=checkbox] {
+input[type="checkbox"] {
   display: none;
 }
 
@@ -456,11 +462,11 @@ footer p {
     position: relative;
     overflow: hidden;
   }
-  .indexHeader input[type=checkbox],
+  .indexHeader input[type="checkbox"],
   .indexHeader .toggle,
-  .blogHeader input[type=checkbox],
+  .blogHeader input[type="checkbox"],
   .blogHeader .toggle,
-  .contactHeader input[type=checkbox],
+  .contactHeader input[type="checkbox"],
   .contactHeader .toggle {
     display: block;
     position: fixed;
@@ -475,21 +481,21 @@ footer p {
     font-size: 50px;
     z-index: 9;
   }
-  .indexHeader input[type=checkbox],
-  .blogHeader input[type=checkbox],
-  .contactHeader input[type=checkbox] {
+  .indexHeader input[type="checkbox"],
+  .blogHeader input[type="checkbox"],
+  .contactHeader input[type="checkbox"] {
     opacity: 0;
     z-index: 10;
   }
-  input[type=checkbox],
+  input[type="checkbox"],
   .toggle {
     cursor: pointer;
   }
-  input[type=checkbox]:hover + .toggle,
-  input[type=checkbox]:checked + .toggle {
+  input[type="checkbox"]:hover + .toggle,
+  input[type="checkbox"]:checked + .toggle {
     color: #f0efed;
   }
-  input[type=checkbox]:checked ~ nav {
+  input[type="checkbox"]:checked ~ nav {
     right: 0px;
   }
   nav {
@@ -601,35 +607,84 @@ p {
   width: 100%;
 }
 
-.cards {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.cards .wrapper {
+  margin: 0px;
 }
 
-.cards .imageContainer {
+.things {
+  position: relative;
+  top: -25px;
+}
+
+.things .side,
+.travelled .side {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.things .red {
+  background-color: #a82706;
+}
+
+.things .white {
+  background-color: #ffffff;
+  z-index: -1;
+}
+
+.things .bgContainer {
   width: 52%;
   position: relative;
-}
-
-.cards .imageContainer.left {
   top: -25px;
   left: -25px;
   -webkit-box-shadow: 25px 25px #a82706;
           box-shadow: 25px 25px #a82706;
+  background: url(../assets/home-image-2.jpg) no-repeat center;
+  background-size: cover;
 }
 
-.cards .textContainer {
+.things .textContainer {
   width: 48%;
+  position: relative;
+  top: 25px;
+  margin: 0 auto;
+  padding-left: 50px;
+  margin-top: 75px;
 }
 
-.cards .imageContainer.right {
+.travelled {
+  position: relative;
+  bottom: -25px;
+}
+
+.travelled .yellow {
+  background-color: #f6a823;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  position: relative;
+  bottom: -25px;
+}
+
+.travelled .bgContainer {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  bottom: -25px;
-  right: -25px;
   -webkit-box-shadow: 25px 25px #f6a823;
           box-shadow: 25px 25px #f6a823;
+  position: relative;
+  right: -25px;
+  width: 52%;
+  z-index: 1;
+  background: url(../assets/home-image-3.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.travelled .textContainer {
+  width: 48%;
+  text-align: right;
+  padding-right: 50px;
+  margin-bottom: 75px;
 }
 
 .info .flexContainer {
@@ -827,7 +882,7 @@ aside .recent li p {
   width: 100%;
 }
 
-.textContainer p {
+.guestPost p {
   padding: 0px;
 }
 

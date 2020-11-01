@@ -1,312 +1,310 @@
 // colors
 
-$black:#2c2c2c;
-$darkGreen:#285e64;
-$yellow:#f6a823;
-$grey:#4f4f4f;
-$teal:#05afc1;
-$red:#a82706;
-$smoke:#f0efed;
+$black: #2c2c2c;
+$darkGreen: #285e64;
+$yellow: #f6a823;
+$grey: #4f4f4f;
+$teal: #05afc1;
+$red: #a82706;
+$smoke: #f0efed;
 
 // stripping styles
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 a {
-    text-decoration:none
+  text-decoration: none;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
-input[type=checkbox] {
-    display: none;
+input[type="checkbox"] {
+  display: none;
 }
 
 // global styles
 .wrapper {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .flexContainer {
-    display: flex;
+  display: flex;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    line-height: 32px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  line-height: 32px;
 }
 
 h1,
 h2,
 h3 {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Lora', serif;
+  margin: 0px;
+  padding: 0px;
 }
 
 h1 {
-    font-size: 8rem;
-    text-transform: uppercase;
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-family: "Lora", serif;
 }
 
 img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 h2 {
-    font-size: 4.2rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  font-size: 4.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 3.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: $teal;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 2rem;
-    line-height: 32px;
-    font-weight: bold;
-    border: none;
+  padding: 10px 20px;
+  background-color: $teal;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 32px;
+  font-weight: bold;
+  border: none;
 }
 
 button:hover,
 button:focus {
-    color: $teal;
-    background-color: $black;
-    cursor: pointer;
+  color: $teal;
+  background-color: $black;
+  cursor: pointer;
 }
 
 a:hover,
 a:focus {
-    border-bottom: 3px solid black;
+  border-bottom: 3px solid black;
 }
 
 input,
 textarea {
-    border: none;
-    margin-top: 25px;
-    padding: 30px 25px;
+  border: none;
+  margin-top: 25px;
+  padding: 30px 25px;
 }
 
 form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 100px;
-    input[type=text],
-    input[type=email] {
-        width: 48%;
-    }
-    textarea{
-        width: 100%;
-    }
-    button {
-        width: 100%;
-        margin-top: 25px;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  input[type="text"],
+  input[type="email"] {
+    width: 48%;
+  }
+  textarea {
+    width: 100%;
+  }
+  button {
+    width: 100%;
+    margin-top: 25px;
+  }
 }
-
-
 
 // header stylings for blog and contact page
 .blogHeader,
-.contactHeader{
-    .bg{
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin: 0px;
-        height: 40vh;
-        div {
-            height: 100%;
-            position: relative;
-        }
+.contactHeader {
+  .bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0px;
+    height: 40vh;
+    div {
+      height: 100%;
+      position: relative;
     }
-    h1 {
-        position: absolute;
-        bottom: -10px;
-    }
+  }
+  h1 {
+    position: absolute;
+    bottom: -10px;
+  }
 }
 
 // nav css applied to all pages
 
-
 nav {
-    padding: 20px;
-    background-color: $yellow;
+  padding: 20px;
+  background-color: $yellow;
 }
 
 nav {
-    ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-transform: uppercase;
-        color: $black;
-    }
-    span {
-        font-size: 4.2rem;
-        font-family: 'Lora', serif;
-        padding: 0px 40px;
-    }
-    li {
-        padding: 0px 20px;
-        font-size: 3.2rem;
-        font-weight: bold;
-    }
-    a {
-        color: $black;
-        font-size: 2rem;
-    }
-    a:hover,
-    a:focus {
-        border-bottom: 2px solid $black;
-    }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: $black;
+  }
+  span {
+    font-size: 4.2rem;
+    font-family: "Lora", serif;
+    padding: 0px 40px;
+  }
+  li {
+    padding: 0px 20px;
+    font-size: 3.2rem;
+    font-weight: bold;
+  }
+  a {
+    color: $black;
+    font-size: 2rem;
+  }
+  a:hover,
+  a:focus {
+    border-bottom: 2px solid $black;
+  }
 }
 
 .toggle,
-input[type=checkbox] {
-    display: none;
+input[type="checkbox"] {
+  display: none;
 }
-    
+
 // footer stylings
 
 footer {
-    background-color: $black;
-    color: $smoke;
-    text-align: center;
-    padding: 10px 0px;
-    p {
-        padding: 0px;
-    }
+  background-color: $black;
+  color: $smoke;
+  text-align: center;
+  padding: 10px 0px;
+  p {
+    padding: 0px;
+  }
 }
 
 // shared media queries
 
 // forms
 
-    @media (max-width:768px) {
-        body {
-            font-size: 1.6rem;
-        }
+@media (max-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
 
-        form{
-            input[type="text"], 
-            input[type="email"] {
-                width: 100%;
-            }
-        }
-
-        
-        .blogHeader h1,
-        .contactHeader h1{ 
-            font-size: 5rem;
-            width: 100%;
-            position: relative;
-            text-align: center;
-            bottom: -150px;
-        }
-
-        // slide out nav
-
-        
-        .indexHeader,
-        .blogHeader,
-        .contactHeader {
-            position: relative;
-            overflow: hidden;
-            input[type=checkbox],
-            .toggle { 
-                display: block;
-                position: fixed;
-                height: 50px;
-                width: 50px;
-                right: 10px;
-
-            }
-            .toggle {
-                top: 20px;
-                font-size: 50px;
-                z-index: 9;
-            }
-            input[type=checkbox] {
-                opacity: 0;
-                z-index: 10;
-            }
-        }
-
-        input[type=checkbox],
-        .toggle {
-            cursor: pointer;
-        }
-
-        input[type=checkbox]:hover + .toggle,
-        input[type=checkbox]:checked + .toggle {
-            color: $smoke;
-        }
-
-        input[type=checkbox]:checked ~ nav {
-            right: 0px;
-        }
-
-        nav{
-            position: fixed;
-            right: -750px;
-            flex-direction: column;
-            width: 100%;
-            z-index: 5;
-
-        }
-
-        nav ul {
-            flex-direction: column;
-        }
-
-        nav ul li {
-            padding-top: 20px;
-            width: 100%;
-            text-align: center;
-        }
-
-        nav a {
-            width: 100%;
-            display: block;
-        }
-
-        nav a:hover,
-        nav a:focus {
-            background-color: $black;
-            color: $yellow;
-            border: none;
-        }
-
-        nav span {
-            order: -1;
-        }
-
+  form {
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
     }
+  }
 
-    @media (max-width: 480px) {
-        .indexHeader,
-        .blogHeader,
-        .contactHeader {
-            h1 {
-                font-size: 3.5rem;
-            }
-        }
+  .blogHeader h1,
+  .contactHeader h1 {
+    font-size: 5rem;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    bottom: -150px;
+  }
+
+  // slide out nav
+
+  .indexHeader,
+  .blogHeader,
+  .contactHeader {
+    position: relative;
+    overflow: hidden;
+    input[type="checkbox"],
+    .toggle {
+      display: block;
+      position: fixed;
+      height: 50px;
+      width: 50px;
+      right: 10px;
     }
+    .toggle {
+      top: 20px;
+      font-size: 50px;
+      z-index: 9;
+    }
+    input[type="checkbox"] {
+      opacity: 0;
+      z-index: 10;
+    }
+  }
+
+  input[type="checkbox"],
+  .toggle {
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]:hover + .toggle,
+  input[type="checkbox"]:checked + .toggle {
+    color: $smoke;
+  }
+
+  input[type="checkbox"]:checked ~ nav {
+    right: 0px;
+  }
+
+  nav {
+    position: fixed;
+    right: -750px;
+    flex-direction: column;
+    width: 100%;
+    z-index: 5;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    width: 100%;
+    display: block;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    background-color: $black;
+    color: $yellow;
+    border: none;
+  }
+
+  nav span {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .indexHeader,
+  .blogHeader,
+  .contactHeader {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+}

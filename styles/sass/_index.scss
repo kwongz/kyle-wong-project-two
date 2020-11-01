@@ -1,148 +1,194 @@
 // Styling for the home page
 
 .indexHeader {
-    background-color: $yellow;
-    position: relative;
-        .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%;
-            .circular {
-                flex-grow: 1;
-                position: relative;
-                margin-left: 70px;
-                margin-right: 50px;
-                text-transform: uppercase;
-            }
-            div:last-child{
-                position: relative;
-                top: 80px;
-                box-shadow: 20px 20px lighten($smoke, 100);
-            }
-        }
+  background-color: $yellow;
+  position: relative;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    .circular {
+      flex-grow: 1;
+      position: relative;
+      margin-left: 70px;
+      margin-right: 50px;
+      text-transform: uppercase;
+    }
+    div:last-child {
+      position: relative;
+      top: 80px;
+      box-shadow: 20px 20px lighten($smoke, 100);
+    }
+  }
 }
 
-.circular img{
-    width: 170px;
-    position: absolute;
-    bottom: 60px;
-    left: -55px;
+.circular img {
+  width: 170px;
+  position: absolute;
+  bottom: 60px;
+  left: -55px;
 }
 
 .indexHeader h1 {
-    font-size: 12rem;
-    color: darken($grey, 15);
-    line-height: 92px;
+  font-size: 12rem;
+  color: darken($grey, 15);
+  line-height: 92px;
 }
 
 p {
-    padding: 40px 0px;
+  padding: 40px 0px;
 }
 
 .about {
-    background-color: $smoke;
-    .textContainer:first-child {
-        padding-right: 15%;
-        padding-top: 100px;
-        padding-bottom:150px;
-        width: 100%;
-    }
+  background-color: $smoke;
+  .textContainer:first-child {
+    padding-right: 15%;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    width: 100%;
+  }
 }
 
 // card section, the hardest section to work on
-.cards {
-    flex-wrap: wrap;
-    .imageContainer{
-        width: 52%;
-        position: relative;
-    }
-    .imageContainer.left {
-        top: -25px;
-        left: -25px;
-        box-shadow: 25px 25px $red;
-    }
-    .textContainer {
-        width: 48%;
-    }
-    .imageContainer.right {
-        order: 1;
-        bottom: -25px;
-        right: -25px;
-        box-shadow: 25px 25px $yellow;
-    }
+.cards .wrapper {
+  margin: 0px;
+}
+.things {
+  position: relative;
+  top: -25px;
+}
+
+.things .side,
+.travelled .side {
+  flex-grow: 1;
+}
+
+.things .red {
+  background-color: $red;
+}
+
+.things .white {
+  background-color: #ffffff;
+  z-index: -1;
+}
+
+.things .bgContainer {
+  width: 52%;
+  position: relative;
+  top: -25px;
+  left: -25px;
+  box-shadow: 25px 25px $red;
+  background: url(../assets/home-image-2.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.things .textContainer {
+  width: 48%;
+  position: relative;
+  top: 25px;
+  margin: 0 auto;
+  padding-left: 50px;
+  margin-top: 75px;
+}
+
+.travelled {
+  position: relative;
+  bottom: -25px;
+  .yellow {
+    background-color: $yellow;
+    order: 2;
+    position: relative;
+    bottom: -25px;
+  }
+  .bgContainer {
+    order: 1;
+    box-shadow: 25px 25px $yellow;
+    position: relative;
+    right: -25px;
+    width: 52%;
+    z-index: 1;
+    background: url(../assets/home-image-3.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .textContainer {
+    width: 48%;
+    text-align: right;
+    padding-right: 50px;
+    margin-bottom: 75px;
+  }
 }
 
 // info section
 
 .info .flexContainer {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .info h2 {
-    padding-top: 5px;
+  padding-top: 5px;
 }
 
-.info{
-    background-color: $smoke;
-    padding-top: 50px;
-    .card {
-        display: flex;
-        width: 50%;
-        padding-top: 25px;
-        i {
-            background-color: $yellow;
-            border-radius: 50%;
-            padding: 10px;
-            height: 40px;
-        }
-        div {
-            padding-left: 15px;
-        }
+.info {
+  background-color: $smoke;
+  padding-top: 50px;
+  .card {
+    display: flex;
+    width: 50%;
+    padding-top: 25px;
+    i {
+      background-color: $yellow;
+      border-radius: 50%;
+      padding: 10px;
+      height: 40px;
     }
+    div {
+      padding-left: 15px;
+    }
+  }
 }
 
 .bg {
-    background-image: url(../assets/home-image-4.jpg);
-    height: 40vh;
-    margin-top: 50px;
+  background-image: url(../assets/home-image-4.jpg);
+  height: 40vh;
+  margin-top: 50px;
 }
 
 // journey
 
 .journey {
-    background-color: $smoke;
-    padding: 50px 0px;
-    .imageContainer {
-        background-color: $yellow;
-        margin-right: 25px;
-        width: 80%;
-    }
-        img{
-            position: relative;
-            top: -20px;
-            left: -20px;
-        }
-    h2 {
-        padding-top: 10px;
-    }
-    .textContainer {
-        padding-left: 40px;
-    }
+  background-color: $smoke;
+  padding: 50px 0px;
+  .imageContainer {
+    background-color: $yellow;
+    margin-right: 25px;
+    width: 80%;
+  }
+  img {
+    position: relative;
+    top: -20px;
+    left: -20px;
+  }
+  h2 {
+    padding-top: 10px;
+  }
+  .textContainer {
+    padding-left: 40px;
+  }
 }
 
 // gallery styling
 
 .gallery {
-    padding: 50px 0px;
-    .flexContainer {
-        justify-content: space-between;
-    }
-    .imageContainer {
-        width: 31%;
-        border: 3px solid #ffffff;
-    }
-    .imageContainer:hover {
-        border: 3px solid $red;
-    }
+  padding: 50px 0px;
+  .flexContainer {
+    justify-content: space-between;
+  }
+  .imageContainer {
+    width: 31%;
+    border: 3px solid #ffffff;
+  }
+  .imageContainer:hover {
+    border: 3px solid $red;
+  }
 }
