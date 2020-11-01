@@ -40,13 +40,21 @@ p {
   padding: 40px 0px;
 }
 
+.about,
+.info,
+.journey,
+.gallery {
+  padding: 100px 0px;
+}
+
 .about {
   background-color: $smoke;
   .textContainer:first-child {
-    padding-right: 15%;
-    padding-top: 100px;
-    padding-bottom: 150px;
+    padding: 25px 0px;
     width: 100%;
+  }
+  p {
+    width: 90%;
   }
 }
 
@@ -57,6 +65,7 @@ p {
 .things {
   position: relative;
   top: -25px;
+  margin-bottom: 50px;
 }
 
 .things .side,
@@ -88,7 +97,7 @@ p {
   position: relative;
   top: 25px;
   margin: 0 auto;
-  padding-left: 50px;
+  padding-left: 100px;
   margin-top: 75px;
 }
 
@@ -114,7 +123,7 @@ p {
   .textContainer {
     width: 48%;
     text-align: right;
-    padding-right: 50px;
+    padding-right: 100px;
     margin-bottom: 75px;
   }
 }
@@ -123,6 +132,7 @@ p {
 
 .info .flexContainer {
   flex-wrap: wrap;
+  padding-top: 50px;
 }
 
 .info h2 {
@@ -131,7 +141,7 @@ p {
 
 .info {
   background-color: $smoke;
-  padding-top: 50px;
+  padding-bottom: 0px;
   .card {
     display: flex;
     width: 50%;
@@ -158,11 +168,15 @@ p {
 
 .journey {
   background-color: $smoke;
-  padding: 50px 0px;
+  .flexContainer {
+    justify-content: space-between;
+    align-items: center;
+  }
   .imageContainer {
     background-color: $yellow;
-    margin-right: 25px;
-    width: 80%;
+    position: relative;
+    bottom: -25px;
+    width: 25%;
   }
   img {
     position: relative;
@@ -173,14 +187,13 @@ p {
     padding-top: 10px;
   }
   .textContainer {
-    padding-left: 40px;
+    width: 65%;
   }
 }
 
 // gallery styling
 
 .gallery {
-  padding: 50px 0px;
   .flexContainer {
     justify-content: space-between;
   }

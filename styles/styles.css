@@ -596,15 +596,24 @@ p {
   padding: 40px 0px;
 }
 
+.about,
+.info,
+.journey,
+.gallery {
+  padding: 100px 0px;
+}
+
 .about {
   background-color: #f0efed;
 }
 
 .about .textContainer:first-child {
-  padding-right: 15%;
-  padding-top: 100px;
-  padding-bottom: 150px;
+  padding: 25px 0px;
   width: 100%;
+}
+
+.about p {
+  width: 90%;
 }
 
 .cards .wrapper {
@@ -614,6 +623,7 @@ p {
 .things {
   position: relative;
   top: -25px;
+  margin-bottom: 50px;
 }
 
 .things .side,
@@ -648,7 +658,7 @@ p {
   position: relative;
   top: 25px;
   margin: 0 auto;
-  padding-left: 50px;
+  padding-left: 100px;
   margin-top: 75px;
 }
 
@@ -683,13 +693,14 @@ p {
 .travelled .textContainer {
   width: 48%;
   text-align: right;
-  padding-right: 50px;
+  padding-right: 100px;
   margin-bottom: 75px;
 }
 
 .info .flexContainer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-top: 50px;
 }
 
 .info h2 {
@@ -698,7 +709,7 @@ p {
 
 .info {
   background-color: #f0efed;
-  padding-top: 50px;
+  padding-bottom: 0px;
 }
 
 .info .card {
@@ -728,13 +739,22 @@ p {
 
 .journey {
   background-color: #f0efed;
-  padding: 50px 0px;
+}
+
+.journey .flexContainer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .journey .imageContainer {
   background-color: #f6a823;
-  margin-right: 25px;
-  width: 80%;
+  position: relative;
+  bottom: -25px;
+  width: 25%;
 }
 
 .journey img {
@@ -748,11 +768,7 @@ p {
 }
 
 .journey .textContainer {
-  padding-left: 40px;
-}
-
-.gallery {
-  padding: 50px 0px;
+  width: 65%;
 }
 
 .gallery .flexContainer {
