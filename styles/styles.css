@@ -246,6 +246,7 @@ html {
 
 a {
   text-decoration: none;
+  color: #2c2c2c;
 }
 
 li {
@@ -282,7 +283,6 @@ h3 {
 }
 
 h1 {
-  font-size: 8rem;
   text-transform: uppercase;
   font-family: "Lora", serif;
 }
@@ -440,6 +440,15 @@ footer p {
   padding: 0px;
 }
 
+@media (max-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   body {
     font-size: 1.6rem;
@@ -500,7 +509,7 @@ footer p {
   }
   nav {
     position: fixed;
-    right: -750px;
+    right: -770px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -549,27 +558,22 @@ footer p {
   position: relative;
 }
 
+.indexHeader h1 {
+  font-size: 14rem;
+  color: #292929;
+  line-height: 92px;
+  margin-left: 25px;
+}
+
 .indexHeader .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-}
-
-.indexHeader .content .circular {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  position: relative;
-  margin-left: 70px;
-  margin-right: 50px;
-  text-transform: uppercase;
 }
 
 .indexHeader .content div:last-child {
@@ -579,17 +583,19 @@ footer p {
           box-shadow: 20px 20px white;
 }
 
-.circular img {
-  width: 170px;
-  position: absolute;
-  bottom: 60px;
-  left: -55px;
+.indexHeader .circular {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+  text-transform: uppercase;
 }
 
-.indexHeader h1 {
-  font-size: 12rem;
-  color: #292929;
-  line-height: 92px;
+.indexHeader .circular img {
+  width: initial;
+  position: absolute;
+  bottom: 60px;
+  left: -35px;
 }
 
 p {
@@ -609,7 +615,6 @@ p {
 
 .about .textContainer:first-child {
   padding: 25px 0px;
-  width: 100%;
 }
 
 .about p {
@@ -705,6 +710,7 @@ p {
 
 .info h2 {
   padding-top: 5px;
+  padding-left: 10px;
 }
 
 .info {
@@ -712,11 +718,17 @@ p {
   padding-bottom: 0px;
 }
 
+.info .wrapper.flexContainer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .info .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 47%;
   padding-top: 25px;
 }
 
@@ -725,10 +737,6 @@ p {
   border-radius: 50%;
   padding: 10px;
   height: 40px;
-}
-
-.info .card div {
-  padding-left: 15px;
 }
 
 .bg {
@@ -784,6 +792,196 @@ p {
 
 .gallery .imageContainer:hover {
   border: 3px solid #a82706;
+}
+
+@media (max-width: 1024px) {
+  .indexHeader h1 {
+    font-size: 10rem;
+  }
+  .things,
+  .travelled {
+    position: initial;
+    margin-bottom: 0px;
+  }
+  .things .side,
+  .travelled .side {
+    display: none;
+  }
+  .things .wrapper,
+  .travelled .wrapper {
+    width: 100%;
+  }
+  .things .flexContainer,
+  .travelled .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .things .bgContainer,
+  .travelled .bgContainer {
+    width: 100%;
+    height: 400px;
+    position: initial;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .things .textContainer,
+  .travelled .textContainer {
+    width: 90%;
+    margin: 0 auto;
+    position: initial;
+    padding: 100px 0px;
+  }
+  .things .yellow,
+  .travelled .yellow {
+    position: initial;
+  }
+  .info {
+    padding-top: 0px;
+  }
+  .info .bg {
+    margin: 0px;
+  }
+  .cards .textContainer {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .indexHeader h1 {
+    font-size: 8rem;
+    margin: 0px;
+  }
+  .indexHeader .circular {
+    margin-top: 100px;
+  }
+  .indexHeader .circular img {
+    width: 100px;
+  }
+  .indexHeader .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .indexHeader .content div:last-child {
+    width: 60%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    position: initial;
+    width: initial;
+    padding-bottom: 50px;
+  }
+  .about {
+    padding: 50px 0px;
+  }
+  .about .textContainer {
+    text-align: center;
+  }
+  .about p {
+    width: 100%;
+  }
+  .info {
+    padding-top: 50px;
+  }
+  .info .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px;
+  }
+  .info .card {
+    width: 100%;
+  }
+  .info .textContainer {
+    text-align: center;
+  }
+  .info .textContainer .flexContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .journey {
+    padding: 75px 0px;
+  }
+  .journey .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .journey .imageContainer {
+    width: initial;
+    bottom: 0px;
+    right: -12.5px;
+  }
+  .journey .textContainer {
+    padding-top: 25px;
+    width: 100%;
+    text-align: center;
+  }
+  .gallery {
+    padding: 50px 0px;
+  }
+  .gallery .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .gallery .imageContainer {
+    width: initial;
+    margin-top: 25px;
+  }
+  .gallery .imageContainer:first-child {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .indexHeader h1 {
+    font-size: 6rem;
+  }
+  .indexHeader .circular img {
+    width: 80px;
+    left: -25px;
+    bottom: 50px;
+  }
+  .indexHeader .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .indexHeader .content div:last-child {
+    width: 60%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    position: initial;
+    width: initial;
+    padding-bottom: 50px;
+  }
+  .info .card .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .blogHeader .bg {

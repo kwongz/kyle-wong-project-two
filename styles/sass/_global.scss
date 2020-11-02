@@ -21,6 +21,7 @@ html {
 
 a {
   text-decoration: none;
+  color: $black;
 }
 
 li {
@@ -56,7 +57,7 @@ h3 {
 }
 
 h1 {
-  font-size: 8rem;
+  // font-size: 8rem;
   text-transform: uppercase;
   font-family: "Lora", serif;
 }
@@ -152,9 +153,6 @@ form {
 nav {
   padding: 20px;
   background-color: $yellow;
-}
-
-nav {
   ul {
     display: flex;
     justify-content: center;
@@ -200,6 +198,16 @@ footer {
 }
 
 // shared media queries
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+}
 
 // forms
 
@@ -266,7 +274,7 @@ footer {
 
   nav {
     position: fixed;
-    right: -750px;
+    right: -770px;
     flex-direction: column;
     width: 100%;
     z-index: 5;
