@@ -1,219 +1,188 @@
-.blogHeader{
-    .bg{
-        background-image: url(../assets/blog-image-1.jpg);
-        margin: 0px;
-        height: 40vh;
-    }
+.blogHeader {
+  .bg {
+    background-image: url(../assets/blog-image-1.jpg);
+    margin: 0px;
+    height: 40vh;
+  }
 }
 
 .blog {
-    padding-top: 75px;
-    background: $smoke;
-    h2 {
+  padding-top: 75px;
+  background: $smoke;
+  h2 {
     font-size: 24px;
     color: $black;
-    }
-    .flexContainer {
-        justify-content: space-between;
-    }
-    p{
-        padding: 10px 0px;
-    }
+  }
+  .flexContainer {
+    justify-content: space-between;
+  }
+  p {
+    padding: 10px 0px;
+  }
 }
 
 aside {
-    width: 30%;
-    .profile,
-    .recent {
-        background-color: #ffffff;
-        padding: 25px;
+  width: 30%;
+  .profile,
+  .recent {
+    background-color: #ffffff;
+    padding: 25px;
+  }
+  .profile {
+    a {
+      color: $darkGreen;
+      font-weight: bold;
     }
-    .profile {
-        a {
-            color: $darkGreen;
-            font-weight: bold;
-        }
-        p {
-            padding-bottom: 0px;
-            padding-top: 25px;
-        }
-        h2 {
-            padding-top: 25px;
-        }
+    p {
+      padding-bottom: 0px;
+      padding-top: 25px;
     }
-    .recent {
-        margin-top: 50px;
-        ul{
-            padding-top: 20px;
-            padding-left: 25px;
-            flex-direction: column;
-        }
-        li{
-            list-style: disc ;
-            color: $yellow;
-        }
-        li p {
-            color: $black;
-            padding: 0px;
-        }
+    h2 {
+      padding-top: 25px;
     }
+  }
+  .recent {
+    margin-top: 50px;
+    ul {
+      padding-top: 20px;
+      padding-left: 25px;
+      flex-direction: column;
+    }
+    li {
+      list-style: disc;
+      color: $yellow;
+    }
+    li p {
+      color: $black;
+      padding: 0px;
+    }
+  }
 }
 
 .blogger {
-    width: 68%;
-    .sophiePost,
-    .guestPost .flexContainer {
-        background-color: #ffffff;
-        padding: 25px;
-        border-bottom: 5px solid $yellow;
-    }
+  width: 68%;
+  .sophiePost,
+  .guestPost .flexContainer {
+    background-color: #ffffff;
+    padding: 25px;
+    border-bottom: 5px solid $yellow;
+  }
 }
 
 .user {
-    color: $darkGreen;
-    font-weight: bold;
-    font-style: italic;
+  color: $darkGreen;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .guestPost {
+  margin-top: 25px;
+  .flexContainer {
     margin-top: 25px;
-    .flexContainer{
-        margin-top: 25px;
-        width: 100%;
-        justify-content: space-between;
-        padding: 10px;
-        .imageContainer {
-            width: 100px;
-            margin-right: 15px;
-        }
-        .textContainer{
-            width: 100%;
-        }
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    .imageContainer {
+      width: 100px;
+      margin-right: 15px;
     }
+    .textContainer {
+      width: 100%;
+    }
+  }
 }
 
 .guestPost p {
-    padding: 0px;
+  padding: 0px;
 }
 
-
-// check with designer if 2014 is necessary
-// @media (max-width: 1024px){
-//     .blog {
-//         .flexContainer {
-//             flex-wrap:wrap;
-//             aside {
-//                 width: 100%;
-//                 display: flex;
-//                 justify-content: space-between;
-//             }
-//         }
-//     }
-
-//     .profile {
-//         width: 60%;
-//     }
-//     aside .recent {
-//         width: 35%;
-//         margin-top: 0px;
-//         height: 300px;
-//     }
-// }
-
-
-    @media (max-width: 1024px) {
-
-        aside {
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            .profile{
-                width: 60%;
-            }
-            .recent {
-                margin-left: 25px;
-                width: 280px;
-                margin-top: 0px;
-                h2 {
-                    text-align: center;
-                }
-                ul.flexContainer {
-                    justify-content: center;
-                    padding-left: 0px;
-                }
-            }
-        }
-
-        .recent ul li {
-            padding: 5px 0px;
-        }
-
-
-        .blog {
-            .flexContainer {
-                flex-direction: column;
-            }
-        }
-
-        .blogger {
-            width: 100%;
-            margin-top: 25px;
-        }
-
-        .recent {
-            .flexContainer {
-                flex-wrap: wrap;
-                flex-direction: row;
-            }
-        }
-
-        .blogger .guestPost .flexContainer {
-            flex-direction: row;
-        }
-
+@media (max-width: 1024px) {
+  aside {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .profile {
+      width: 60%;
     }
-
-    @media (max-width:768px){
-        aside {
-            flex-direction: column;
-            .profile {
-                width: 100%;
-            }
-            .recent {
-                width: 100%;
-                margin-top: 25px;
-                margin-left: 0px;
-            }
-        }
-
-        aside .recent ul.flexContainer {
-            justify-content: space-around;
-        }
-        .recent ul li {
-            margin-left: 20px;
-        }
-
-        .blogger .guestPost .flexContainer {
-            flex-direction: column;
-        }
+    .recent {
+      margin-left: 25px;
+      width: 280px;
+      margin-top: 0px;
+      h2 {
+        text-align: center;
+      }
+      ul.flexContainer {
+        justify-content: center;
+        padding-left: 0px;
+      }
     }
+  }
 
+  .recent ul li {
+    padding: 5px 0px;
+  }
 
-
-    @media (max-width:480px) {
-        aside{
-            .recent{ 
-                .flexContainer{
-                    flex-direction: column;
-                    align-content: center;
-                    padding: 0px;
-                }
-            }
-        }
-        
-        .recent ul li {
-            margin-left: 0px;
-        }
+  .blog {
+    .flexContainer {
+      flex-direction: column;
     }
+  }
 
+  .blogger {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .recent {
+    .flexContainer {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+
+  .blogger .guestPost .flexContainer {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  aside {
+    flex-direction: column;
+    .profile {
+      width: 100%;
+    }
+    .recent {
+      width: 100%;
+      margin-top: 25px;
+      margin-left: 0px;
+    }
+  }
+
+  aside .recent ul.flexContainer {
+    justify-content: space-around;
+  }
+  .recent ul li {
+    margin-left: 20px;
+  }
+
+  .blogger .guestPost .flexContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  aside {
+    .recent {
+      .flexContainer {
+        flex-direction: column;
+        align-content: center;
+        padding: 0px;
+      }
+    }
+  }
+
+  .recent ul li {
+    margin-left: 0px;
+  }
+}
