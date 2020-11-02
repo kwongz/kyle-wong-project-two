@@ -32,10 +32,6 @@
   }
 }
 
-p {
-  padding: 40px 0px;
-}
-
 .about,
 .info,
 .journey,
@@ -61,39 +57,26 @@ p {
   position: relative;
   top: -25px;
   margin-bottom: 50px;
-}
-
-.things .side,
-.travelled .side {
-  flex-grow: 1;
-}
-
-.things .red {
-  background-color: $red;
-}
-
-.things .white {
-  background-color: #ffffff;
-  z-index: -1;
-}
-
-.things .bgContainer {
-  width: 52%;
-  position: relative;
-  top: -25px;
-  left: -25px;
-  box-shadow: 25px 25px $red;
-  background: url(../assets/home-image-2.jpg) no-repeat center;
-  background-size: cover;
-}
-
-.things .textContainer {
-  width: 48%;
-  position: relative;
-  top: 25px;
-  margin: 0 auto;
-  padding-left: 100px;
-  margin-top: 75px;
+  .red {
+    background-color: $red;
+  }
+  .white {
+    background-color: #ffffff;
+    z-index: -1;
+  }
+  .bgContainer {
+    top: -25px;
+    left: -25px;
+    box-shadow: 25px 25px $red;
+    background: url(../assets/home-image-2.jpg) no-repeat center;
+  }
+  .textContainer {
+    position: relative;
+    top: 25px;
+    margin: 0 auto;
+    padding-left: 100px;
+    margin-top: 75px;
+  }
 }
 
 .travelled {
@@ -108,56 +91,67 @@ p {
   .bgContainer {
     order: 1;
     box-shadow: 25px 25px $yellow;
-    position: relative;
     right: -25px;
-    width: 52%;
     z-index: 1;
     background: url(../assets/home-image-3.jpg) no-repeat center;
-    background-size: cover;
   }
   .textContainer {
-    width: 48%;
     text-align: right;
     padding-right: 100px;
     margin-bottom: 75px;
   }
 }
 
+.things,
+.travelled {
+  .side {
+    flex-grow: 1;
+  }
+  .textContainer {
+    width: 48%;
+  }
+  .bgContainer {
+    width: 52%;
+    position: relative;
+    background-size: cover;
+  }
+}
+
 // info section
-
-.info .flexContainer {
-  flex-wrap: wrap;
-  padding-top: 50px;
-}
-
-.info h2 {
-  padding-top: 5px;
-  padding-left: 10px;
-}
 
 .info {
   background-color: $smoke;
   padding-bottom: 0px;
+  h2 {
+    padding-left: 20px;
+  }
+  p {
+    margin-left: 70px;
+  }
+  .flexContainer {
+    flex-wrap: wrap;
+    padding-top: 25px;
+    align-items: center;
+  }
   .wrapper.flexContainer {
     justify-content: space-between;
   }
   .card {
     display: flex;
-    width: 47%;
+    width: 48%;
     padding-top: 25px;
     i {
       background-color: $yellow;
       border-radius: 50%;
-      padding: 10px;
-      height: 40px;
+      padding: 15px;
+      height: 50px;
     }
   }
-}
-
-.bg {
-  background-image: url(../assets/home-image-4.jpg);
-  height: 40vh;
-  margin-top: 50px;
+  .bg {
+    background-image: url(../assets/home-image-4.jpg);
+    height: 50vh;
+    margin-top: 50px;
+  }
 }
 
 // journey
@@ -301,6 +295,9 @@ p {
         flex-direction: row;
         justify-content: center;
       }
+    }
+    p {
+      margin-left: 0px;
     }
   }
 

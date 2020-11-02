@@ -19,6 +19,10 @@ html {
   font-size: 62.5%;
 }
 
+p {
+  padding: 40px 0px;
+}
+
 a {
   text-decoration: none;
   color: $black;
@@ -57,7 +61,7 @@ h3 {
 }
 
 h1 {
-  // font-size: 8rem;
+  font-size: 8rem;
   text-transform: uppercase;
   font-family: "Lora", serif;
 }
@@ -98,9 +102,9 @@ button:focus {
   cursor: pointer;
 }
 
-a:hover,
-a:focus {
-  border-bottom: 3px solid black;
+button:hover a,
+button:focus a {
+  color: $teal;
 }
 
 input,
@@ -278,21 +282,21 @@ footer {
     flex-direction: column;
     width: 100%;
     z-index: 5;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    padding-top: 20px;
-    width: 100%;
-    text-align: center;
-  }
-
-  nav a {
-    width: 100%;
-    display: block;
+    a {
+      width: 100%;
+      display: block;
+    }
+    span {
+      order: -1;
+    }
+    ul {
+      flex-direction: column;
+      li {
+        padding-top: 20px;
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
 
   nav a:hover,
@@ -300,10 +304,6 @@ footer {
     background-color: $black;
     color: $yellow;
     border: none;
-  }
-
-  nav span {
-    order: -1;
   }
 }
 
